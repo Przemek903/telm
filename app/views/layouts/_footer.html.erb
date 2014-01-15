@@ -1,0 +1,11 @@
+<div class="footer">
+
+</div>
+
+<ol class="breadcrumb">
+  <li>Strona jest częścią projektu z przedmiotu TELM </li>
+  <li><%= link_to "Strona domowa", root_path%></li>
+  <% if admin_signed_in? %>
+  <li><%= link_to "Lista Pacjentów", patients_path %></li>
+  <% end %>
+</ol>

@@ -1,0 +1,58 @@
+
+<div id="dodawanie">
+
+<h2>Dodaj nowy przydział lekowy</h2>
+<%= form_for([@patient, @patient.medicines.build]) do |f|%>
+
+
+<div class="field">
+	<%= f.label :name%><br />
+	<%= f.text_field :name%>
+</div>
+
+<div class="field">
+	<%= f.label :dose%>
+	<%= f.number_field :dose%>
+</div>
+
+<div class="field">
+	<%= f.label :hour%>
+	<%= f.radio_button :hour, 8 %>
+	<%= f.label :hour, "8:00" %>
+	<%= f.radio_button :hour, 13 %>
+	<%= f.label :hour, "13:00" %>
+	<%= f.radio_button :hour, 18 %>
+	<%= f.label :hour, "18:00" %>
+
+
+<div class="field">
+	<%= f.label :category%>
+	<%= f.radio_button :category, "Kroplowka" %>
+	<%= f.label :category, "Kroplowka" %>
+	<%= f.radio_button :category, "Syrop" %>
+	<%= f.label :category, "Syrop" %>
+	<%= f.radio_button :category, "Tabletka" %>
+	<%= f.label :category, "Tabletka" %>
+
+
+</div>
+
+<div class="field">
+	<%= f.label :startDate%>
+	<%= f.date_select :startDate%>
+</div>
+
+<div class="field">
+	<%= f.label :endDate%>
+	<%= f.date_select :endDate%>
+</div>
+
+
+  <div >
+    <%= f.submit 'Dodaj nowy przydział lekowy' %>
+  </div>
+<% end %>
+</div>
+</div>
+
+

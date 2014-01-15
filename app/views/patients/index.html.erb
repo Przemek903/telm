@@ -1,0 +1,31 @@
+<h3 class="listaIndex">Lista Pacjentów:</h3>
+<div class="row">
+	<div class="col-md-1"></div>
+<div class="col-md-9">
+<table class="showTable">
+  <tr>
+    <th>Imię</th>
+    <th>Nazwisko</th>
+    <th>Sala</th>
+    <th>Pesel</th>
+    <th>Uwagi</th>
+
+  </tr>
+
+<% @patients.each do |patient| %>
+  <tr>
+    <td><%= patient.name %></td>
+    <td><%= patient.surname %></td>
+    <td><%= patient.room %></td>
+    <td><%= patient.pesel %></td>
+    <td><%= patient.comment %></td>
+    <td class="btn  btn-primary "><%= link_to 'Pokaż dane pacjenta', patient_path(patient) %></td>
+  </tr>
+<% end %>
+</table>
+</div>
+<div class="col-md-2"></div>
+</div>
+<br />
+
+<%= link_to 'Nowy Pacjent', new_patient_path, class: "btn btn-lg btn-success buttonIndex" %>

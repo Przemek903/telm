@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  dose: 1
+  hour: 1
+  type: 
+  startDate: 2013-12-08
+  endDate: 2013-12-08
+
+two:
+  name: MyString
+  dose: 1
+  hour: 1
+  type: 
+  startDate: 2013-12-08
+  endDate: 2013-12-08

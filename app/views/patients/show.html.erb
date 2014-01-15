@@ -1,0 +1,208 @@
+<div class="row">
+	<div class="col-md-3 showobrazek">
+		<%= image_tag('patient.jpg')%>
+	</div>
+	<div class="col-md-4 patientData">
+<p>
+  <b>Imię:</b>
+  <%= @patient.name %>
+</p>
+
+<p>
+  <b>Nazwisko:</b>
+  <%= @patient.surname %>
+</p>
+
+<p>
+  <b>Sala:</b>
+  <%= @patient.room %>
+</p>
+
+<p>
+  <b>Pesel:</b>
+  <%= @patient.pesel %>
+</p>
+
+</div>
+	<div class="col-md-5 showButton">
+		
+		<section class=" btn btn-lg btn-success "><%= link_to 'Edytuj dane pacjenta ', edit_patient_path(@patient) %>&nbsp;</section>
+	</div>
+</div>
+
+<div class="przydzialLekow">
+<h3><b>Aktualnie stosowane leki:</b></h3>
+<div class="row">
+	<div class="col-md-2"></div>
+	<div class=" col-md-8">
+<h4 class="godzina">Godzina 8:00</h4>
+
+<hr class="line" />
+
+<h4>Kroplówki:</h4>
+<%= render "patients/listaKroplowek"%>
+<% @medicines.each do |medicine| %>
+  <% if medicine.category == "Kroplowka" && medicine.startDate <= Date.today && medicine.endDate >= Date.today && medicine.hour == 8 %>
+  <tbody>
+  <tr>
+    <td><%= medicine.name %></td>
+    <td><%= medicine.dose %></td>
+    <td><%= medicine.startDate%></td>
+    <td><%= medicine.endDate%></td>
+  </tr>
+	</tbody>
+<% end %>
+<%end%>
+</table>
+
+
+<h4>Syropy:</h4>
+<%= render "patients/listaSyropow"%>
+<% @medicines.each do |medicine| %>
+  <% if medicine.category == "Syrop" && medicine.startDate <= Date.today && medicine.endDate >= Date.today && medicine.hour == 8 %>
+  <tbody>
+  <tr>
+    <td><%= medicine.name %></td>
+    <td><%= medicine.dose %></td>
+    <td><%= medicine.startDate%></td>
+    <td><%= medicine.endDate%></td>
+  </tr>
+</tbody>
+<% end %>
+<%end%>
+</table>
+
+ 
+<h4>Tabletki:</h4>
+<%= render "patients/listaTabletek"%>
+<% @medicines.each do |medicine| %>
+  <% if medicine.category == "Tabletka" && medicine.startDate <= Date.today && medicine.endDate >= Date.today && medicine.hour == 8 %>
+  <tbody>
+  <tr>
+    <td><%= medicine.name %></td>
+    <td><%= medicine.dose %></td>
+    <td><%= medicine.startDate%></td>
+    <td><%= medicine.endDate%></td>
+  </tr>
+</tbody>
+<% end %>
+<%end%>
+</table>
+
+<h4 class="godzina">Godzina 13:00</h4>
+
+<hr class="line" />
+
+<h4>Kroplówki:</h4>
+<%= render "patients/listaKroplowek"%>
+<% @medicines.each do |medicine| %>
+  <% if medicine.category == "Kroplowka" && medicine.startDate <= Date.today && medicine.endDate >= Date.today && medicine.hour == 13 %>
+  <tbody>
+  <tr>
+    <td><%= medicine.name %></td>
+    <td><%= medicine.dose %></td>
+    <td><%= medicine.startDate%></td>
+    <td><%= medicine.endDate%></td>
+  </tr>
+</tbody>
+<% end %>
+<%end%>
+</table>
+
+
+<h4>Syropy:</h4>
+<%= render "patients/listaSyropow"%>
+<% @medicines.each do |medicine| %>
+  <% if medicine.category == "Syrop" && medicine.startDate <= Date.today && medicine.endDate >= Date.today && medicine.hour == 13 %>
+ <tbody>
+  <tr>
+    <td><%= medicine.name %></td>
+    <td><%= medicine.dose %></td>
+    <td><%= medicine.startDate%></td>
+    <td><%= medicine.endDate%></td>
+  </tr>
+</tbody>
+<% end %>
+<%end%>
+</table>
+
+ 
+<h4>Tabletki:</h4>
+<%= render "patients/listaTabletek"%>
+<% @medicines.each do |medicine| %>
+  <% if medicine.category == "Tabletka" && medicine.startDate <= Date.today && medicine.endDate >= Date.today && medicine.hour == 13 %>
+  <tbody>
+  <tr>
+    <td><%= medicine.name %></td>
+    <td><%= medicine.dose %></td>
+    <td><%= medicine.startDate%></td>
+    <td><%= medicine.endDate%></td>
+  </tr>
+</tbody>
+<% end %>
+<%end%>
+</table>
+
+<h4 class="godzina">Godzina 18:00</h4>
+
+<hr class="line" />
+
+<h4>Kroplówki:</h4>
+<%= render "patients/listaKroplowek"%>
+<% @medicines.each do |medicine| %>
+  <% if medicine.category == "Kroplowka" && medicine.startDate <= Date.today && medicine.endDate >= Date.today && medicine.hour == 18 %>
+  <tbody>
+  <tr>
+    <td><%= medicine.name %></td>
+    <td><%= medicine.dose %></td>
+    <td><%= medicine.startDate%></td>
+    <td><%= medicine.endDate%></td>
+  </tr>
+</tbody>
+<% end %>
+<%end%>
+</table>
+
+
+<h4>Syropy:</h4>
+<%= render "patients/listaSyropow"%>
+<% @medicines.each do |medicine| %>
+  <% if medicine.category == "Syrop" && medicine.startDate <= Date.today && medicine.endDate >= Date.today && medicine.hour == 18 %>
+  <tbody>
+  <tr>
+    <td><%= medicine.name %></td>
+    <td><%= medicine.dose %></td>
+    <td><%= medicine.startDate%></td>
+    <td><%= medicine.endDate%></td>
+  </tr>
+  </tbody>
+<% end %>
+<%end%>
+</table>
+
+ 
+<h4>Tabletki:</h4>
+<%= render "patients/listaTabletek"%>
+<% @medicines.each do |medicine| %>
+  <% if medicine.category == "Tabletka" && medicine.startDate <= Date.today && medicine.endDate >= Date.today && medicine.hour == 18 %>
+ <tbody>
+  <tr>
+    <td><%= medicine.name %></td>
+    <td><%= medicine.dose %></td>
+    <td><%= medicine.startDate%></td>
+    <td><%= medicine.endDate%></td>
+  </tr>
+</tbody>
+<% end %>
+<%end%>
+</table>
+</div>
+<div class="col-md-2"></div>
+</div>
+</div>
+
+
+<%= render "patients/dodawanieLeku"%>
+
+
+<%= link_to 'Powrót', patients_path, class: "btn btn-lg btn-primary" %>

@@ -1,0 +1,21 @@
+
+<div class="row">
+<div class="col-md-7 lewy">
+	<h1>Program PrzyLek</h1>
+	<p> Program <i>PrzyLek</i> jest cyfrowym katalogiem zleceń lekowych w szpitalu. Pozwala on na kontrole i rejestracje podawanych dawek leków dla każdego 
+		pacjenta w szpitalu. Dzięki niemu, <b>Ty</b> będziesz mógł bez problemu przypisać odpowiednie leki każdemu z pacjentów.   </p>
+	<% if admin_signed_in? %>
+			<p> Kliknij poniższy przycisk i zacznij przydzielać leki pacjentom :) </p>
+			<p><%= link_to "Lista pacjentów",patients_path,  class: "btn btn-success btn-lg" %></p> 
+ 
+	<% else %>
+			<p> Zaloguj się. Musimy mieć pewność że jesteś odpowiednią osobą do przydzielania leków pacjentom !!! </p>
+			<p><%= link_to "Zaloguj",new_admin_session_path,  class: "btn btn-primary btn-lg" %></p>
+	<% end %>
+</div>
+	 
+<div class="col-md-3 prawy"> 
+	<%= image_tag("doctor.jpg")%>
+	<p class="prawTekst"> W razie problemów proszę skontaktować się z pomocą techniczną. Jesteśmy dostępni 24h.</p>
+	 </div>
+</div>
