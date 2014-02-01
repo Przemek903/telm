@@ -1,4 +1,4 @@
-class MedicinesController < Api::BaseApiController
+class MedicinesController < ApplicationController
 
 def create
   @patient = Patient.find(params[:patient_id])

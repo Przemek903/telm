@@ -1,4 +1,4 @@
-class HomeController < Api::BaseApiController
+class HomeController < ApplicationController
   def help
     @patients = Patient.all
     @medicines = Medicine.all
