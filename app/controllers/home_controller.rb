@@ -4,8 +4,9 @@ class HomeController < Api::BaseApiController
     @medicines = Medicine.all
     
     respond_to do |format|
-    format.html # index.html.erb
+    format.html 
     format.json { render json: @medicines }
+    
   end
 end
   
