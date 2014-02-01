@@ -1,9 +1,7 @@
 class HomeController < ApplicationController
   def help
-
-end
+  end
   
-  def home 
-  end 
-
+  def home  
+  end
 end
