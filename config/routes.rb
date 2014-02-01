@@ -12,6 +12,8 @@ Telm::Application.routes.draw do
 
   root :to => 'home#home'
   match '/help', to: 'home#help'
+  match '/patient', to: 'home#patient'
+  match '/medicine', to: 'home#medicine'
 
 
 
