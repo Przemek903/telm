@@ -22,4 +22,12 @@ class HomeController < ApplicationController
         f.json { render json: @medicine}
       end
   end
+  
+  def all
+     @medicine = Patient.all + Medicine.all
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @medicine}
+    end
+  end
 end

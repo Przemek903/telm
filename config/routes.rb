@@ -14,6 +14,7 @@ Telm::Application.routes.draw do
   match '/help', to: 'home#help'
   match '/patient', to: 'home#patient'
   match '/medicine', to: 'home#medicine'
+  match '/all', to: 'home#all'
 
 
 

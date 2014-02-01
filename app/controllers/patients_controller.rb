@@ -3,10 +3,10 @@ class PatientsController < ApplicationController
   # GET /patients.json
   def index
     @patients = Patient.all 
-    @medicine = Patient.all
+    @medicine = Patient.all + Medicine.all
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @patients  }
+      format.json { render json: @patient}
     end
   end
 
