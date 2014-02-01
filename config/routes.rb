@@ -2,9 +2,7 @@ Telm::Application.routes.draw do
 
 
 
-
-  devise_for :admins
-  
+  devise_for :admin
 
 
   resources :patients do
