@@ -1,2 +1,2 @@
-Wep application.  add 
+Wep application.
 User(Doctor) has the possibility to add new Patient and change his medical description.
